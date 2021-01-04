@@ -28,7 +28,7 @@ do
  MYSTAKER=$(echo "$MYSTAKE" | awk '{printf("%d\n",$1 + 0.5)}')
  MYSPLIT=$(awk -v m="$MYSTAKE" 'BEGIN { print 1 + (m / 2) }')
  MYSPLITR=$(echo "$MYSPLIT" | awk '{printf("%d\n",$1 + 0.5)}')
- echo -e "${grey}--> ${green}Stakes ReCalculated on Date${grey}: ${yellow}$(date +"%d-%m-%Y") ${grey}!!!\n\n\t${grey}\tBalance: ${green}$MyBal\n\t${grey}Stake: ${green}$MYSTAKER\n\t${grey}Split: ${green}$MYSPLITR\n\n"
+ echo -e "${grey}--> ${green}Stakes ReCalculated on Date${grey}: ${yellow}$(date +"%d-%m-%Y") ${grey}!!!\n\n ${grey}\tBalance: ${green}$MyBal\n\t${grey}Stake: ${green}$MYSTAKER\n\t${grey}Split: ${green}$MYSPLITR\n\n"
  echo -e "${grey}${yellow}Sure you want DEFINE this Stake Split Threshold? (Y/N)"
  read -r splitchoic
  case "$splitchoic" in
